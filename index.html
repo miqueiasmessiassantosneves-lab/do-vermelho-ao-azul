@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Do Vermelho ao Azul: o guia prático para sair das dívidas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+--teal:#0F2B46; --teal-2:#173A5C; --cream:#F7F1E3; --sand:#EFE6D2; --amber:#F4C26B; --amber-d:#8A5A00; --amber-btn:#F4C26B;
+--ink:#1B2A3A; --muted:#44566A; --mist:#D6E2EE;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-0.015em;line-height:1.12;margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--amber-d)}
+.dark .eyebrow{color:var(--amber)}
+section{padding:80px 0}
+.dark{background:var(--teal);color:var(--cream)}
+.sand{background:var(--sand)}
+.btn{display:inline-block;background:var(--amber);color:#1B2A3A;font-weight:600;font-size:18px;padding:18px 32px;border-radius:999px;text-decoration:none;min-height:56px;transition:transform .15s ease,background .15s ease}
+.btn:hover{background:#F8D28F;transform:translateY(-1px)}
+.btn:focus-visible,summary:focus-visible{outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 6px #8A5A00}
+.note{font-size:14px;color:var(--mist)}
+.hero{padding:72px 0 88px}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(38px,6vw,64px);margin:16px 0 20px}
+.hero p.lead{font-size:20px;color:var(--mist);max-width:540px}
+.hero .cta{margin-top:32px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.book{display:flex;justify-content:center}
+.book svg{width:100%;max-width:320px;height:auto;filter:drop-shadow(0 24px 32px rgba(0,0,0,.35))}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.pain h2{font-size:clamp(30px,4.5vw,44px);margin:12px 0 18px}
+.pain p{color:var(--muted)}
+.checks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.checks li{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:14px;padding:16px 18px;box-shadow:0 1px 0 rgba(15,43,70,.08)}
+.checks li::before{content:"";flex:0 0 10px;height:10px;border-radius:50%;background:var(--amber-d);margin-top:9px}
+.shift{text-align:center}
+.shift h2{font-size:clamp(30px,4.8vw,48px);max-width:760px;margin:12px auto 20px}
+.shift p{max-width:640px;margin:0 auto;color:var(--mist);font-size:19px}
+.head{max-width:680px;margin-bottom:40px}
+.head h2{font-size:clamp(30px,4.5vw,44px);margin-top:12px}
+.head p{color:var(--muted);margin-top:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border-radius:18px;padding:22px;box-shadow:0 1px 0 rgba(15,43,70,.08)}
+.partlabel{font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--amber-d);margin:36px 0 14px}
+.card .n{font-family:'Fraunces',serif;font-size:34px;color:var(--amber-d);font-weight:600;line-height:1}
+.card h3{font-size:20px;margin:12px 0 8px}
+.card p{color:var(--muted);font-size:16px}
+.weeks{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.week{border:1px solid rgba(247,241,227,.28);border-radius:18px;padding:26px}
+.week .w{font-size:13px;font-weight:600;letter-spacing:.2em;color:var(--amber)}
+.week h3{font-size:26px;margin:10px 0 10px}
+.week p{color:var(--mist);font-size:16px}
+.head.light p{color:var(--mist)}
+.who ul{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
+.who li{display:flex;gap:12px}
+.who li::before{flex:0 0 22px;font-weight:600}
+.yes li::before{content:"✓";color:#1F6B4A}
+.no li::before{content:"–";color:var(--amber-d)}
+.who h3{font-size:26px}
+.offer{text-align:center}
+.box{max-width:620px;margin:0 auto;background:var(--cream);color:var(--ink);border-radius:24px;padding:44px 32px}
+.box h2{font-size:clamp(28px,4vw,38px);margin:10px 0 18px}
+.box ul{list-style:none;margin:0 auto 24px;padding:0;text-align:left;display:inline-flex;flex-direction:column;gap:10px}
+.box li{display:flex;gap:12px}
+.box li::before{content:"✓";color:#1F6B4A;font-weight:600}
+.price{font-family:'Fraunces',serif;font-size:48px;font-weight:600;color:var(--teal);margin:4px 0 20px}
+.guar{margin-top:18px;font-size:15px;color:var(--muted)}
+.faq{max-width:760px}
+details{border-bottom:1px solid rgba(15,43,70,.18);padding:20px 0}
+summary{cursor:pointer;font-weight:600;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;color:var(--amber-d);line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;color:var(--muted)}
+footer{background:var(--teal);color:var(--mist);padding:48px 0;font-size:14px;text-align:center}
+footer .brand{font-weight:600;letter-spacing:.26em;font-size:15px;color:var(--cream);margin-bottom:12px}
+footer p{max-width:640px;margin:0 auto}
+@media (max-width:860px){
+section{padding:56px 0}
+.hero .grid,.two,.cards,.weeks{grid-template-columns:1fr}
+.hero .grid{gap:40px}
+.book{order:-1}
+.book svg{max-width:220px}
+.hero{padding:48px 0 64px}
+.btn{width:100%;text-align:center}
+}
+.weeks.four{grid-template-columns:repeat(4,1fr)}
+@media (max-width:860px){.weeks.four{grid-template-columns:1fr}}
+</style>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1470149008665781');
+fbq('track','PageView');
+document.addEventListener('DOMContentLoaded',function(){
+document.querySelectorAll('.cta-link').forEach(function(a){
+a.addEventListener('click',function(){fbq('track','InitiateCheckout');});
+});
+});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1470149008665781&ev=PageView&noscript=1"/></noscript>
+</head>
+<body>
+<header class="hero dark">
+<div class="wrap grid">
+<div>
+<div class="eyebrow">Guia prático · Plano de 30 dias</div>
+<h1>Saia do vermelho e organize seu dinheiro, passo a passo</h1>
+<p class="lead">Um método simples para olhar os números sem medo, montar um orçamento que cabe na vida real, negociar suas dívidas e construir uma reserva para não voltar ao vermelho.</p>
+<div class="cta">
+<a class="btn cta-link" href="#comprar">Quero meu exemplar</a>
+<span class="note">Ebook digital em PDF · 76 páginas · acesso imediato após a compra</span>
+</div>
+</div>
+<div class="book"><svg viewBox="0 0 300 450" role="img" aria-label="Capa do ebook Do Vermelho ao Azul, da Biblioteca Digital">
+<rect width="300" height="450" rx="8" fill="#0F2B46"/>
+<rect width="10" height="450" fill="#0A2036"/>
+<text x="28" y="34" font-family="Inter,sans-serif" font-size="8" font-weight="600" letter-spacing="2" fill="#F4C26B">GUIA PRÁTICO</text>
+<rect x="34" y="220" width="26" height="40" rx="3" fill="#e0605a"/><rect x="68" y="190" width="26" height="70" rx="3" fill="#cc6c70"/><rect x="102" y="160" width="26" height="100" rx="3" fill="#b97887"/><rect x="136" y="130" width="26" height="130" rx="3" fill="#a5849d"/><rect x="170" y="100" width="26" height="160" rx="3" fill="#9191b3"/><rect x="204" y="70" width="26" height="190" rx="3" fill="#7e9dca"/><rect x="238" y="40" width="26" height="220" rx="3" fill="#6aa9e0"/>
+<rect x="28" y="266" width="250" height="2" fill="#F4C26B"/>
+<text x="28" y="332" font-family="Fraunces,Georgia,serif" font-size="38" font-weight="600" fill="#F7F1E3">Do Vermelho</text>
+<text x="28" y="374" font-family="Fraunces,Georgia,serif" font-size="38" font-weight="600" fill="#F7F1E3">ao Azul</text>
+<text x="28" y="420" font-family="Inter,sans-serif" font-size="8" font-weight="600" letter-spacing="2.5" fill="#F7F1E3">BIBLIOTECA DIGITAL</text>
+</svg></div>
+</div>
+</header>
+<section class="pain">
+<div class="wrap two">
+<div>
+<div class="eyebrow">Você se reconhece?</div>
+<h2>O dinheiro some antes do fim do mês, e você já nem sabe por onde começar</h2>
+<p>Dívida não é sinal de fraqueza. Na maioria das vezes, é renda apertada, imprevistos e crédito fácil, somados à falta de um método simples que ninguém ensina.</p>
+</div>
+<ul class="checks">
+<li>Você abre o aplicativo do banco com medo do que vai ver</li>
+<li>Empurra a fatura do cartão para o mês seguinte</li>
+<li>Sente um nó no estômago quando o telefone toca</li>
+<li>Não sabe ao certo quanto deve nem a quem</li>
+<li>Já tentou se organizar, mas desistiu depois de poucas semanas</li>
+</ul>
+</div>
+</section>
+<section class="dark shift">
+<div class="wrap">
+<div class="eyebrow">A virada</div>
+<h2>Você não precisa de fórmula mágica. Precisa de um método e de um primeiro passo.</h2>
+<p>O livro leva você na ordem certa: olhar os números, organizar o orçamento, mapear e negociar as dívidas e, por fim, construir uma reserva e hábitos que sustentam a mudança.</p>
+</div>
+</section>
+<section>
+<div class="wrap">
+<div class="head">
+<div class="eyebrow">O que você vai encontrar</div>
+<h2>15 capítulos diretos, com exercícios para fazer na hora</h2>
+<p>Sem teoria longa e sem promessas mágicas. Cada capítulo abre com o que você vai aprender e termina com uma prática para aplicar no mesmo dia.</p>
+</div>
+<div class="partlabel">Parte 1 · Encarar a situação</div>
+<div class="cards"><div class="card"><div class="n">01</div><h3>Onde você está de verdade</h3><p>Raio-x financeiro: quanto entra, quanto sai e quanto você deve.</p></div><div class="card"><div class="n">02</div><h3>Para onde o dinheiro vai</h3><p>Gastos invisíveis, o ciclo da dívida e a auditoria de 90 dias.</p></div><div class="card"><div class="n">03</div><h3>Sua relação com o dinheiro</h3><p>Emoções, crenças e a vergonha da dívida, sem julgamento.</p></div></div>
+<div class="partlabel">Parte 2 · Organizar o dia a dia</div>
+<div class="cards"><div class="card"><div class="n">04</div><h3>Um orçamento que cabe na vida real</h3><p>Percentuais de referência e tetos por categoria.</p></div><div class="card"><div class="n">05</div><h3>Controle simples: 15 minutos por semana</h3><p>Uma rotina curta e um calendário de vencimentos.</p></div><div class="card"><div class="n">06</div><h3>Cortar sem sofrer</h3><p>Contas fixas, mercado, delivery, transporte e tarifas.</p></div><div class="card"><div class="n">07</div><h3>Aumentar a renda com os pés no chão</h3><p>Renda extra realista e como fugir de promessas enganosas.</p></div></div>
+<div class="partlabel">Parte 3 · Sair das dívidas</div>
+<div class="cards"><div class="card"><div class="n">08</div><h3>O mapa das suas dívidas</h3><p>Liste, descubra o que está no seu nome e defina prioridades.</p></div><div class="card"><div class="n">09</div><h3>Estratégias para pagar</h3><p>Bola de neve, avalanche e o efeito cascata.</p></div><div class="card"><div class="n">10</div><h3>Negociar com credores</h3><p>Roteiro, frases prontas, conferência e como evitar golpes.</p></div><div class="card"><div class="n">11</div><h3>Cartão, cheque especial e outros créditos</h3><p>Quando o crédito ajuda e quando vira armadilha.</p></div></div>
+<div class="partlabel">Parte 4 · Construir estabilidade</div>
+<div class="cards"><div class="card"><div class="n">12</div><h3>Reserva de emergência</h3><p>Quanto guardar, onde guardar e como automatizar.</p></div><div class="card"><div class="n">13</div><h3>Compras por impulso</h3><p>Regra das 48 horas e o preço em horas de trabalho.</p></div><div class="card"><div class="n">14</div><h3>Metas, hábitos e primeiros passos para investir</h3><p>Conceitos básicos e sinais de promessa enganosa.</p></div><div class="card"><div class="n">15</div><h3>Plano de 30 dias</h3><p>Uma prática por dia, em quatro semanas.</p></div></div>
+<p style="margin-top:28px;color:var(--muted)">E ainda: <strong>kit de emergência financeira de uma página</strong> e <strong>9 fichas para imprimir e preencher</strong>: raio-x, orçamento, mapa de dívidas, controle semanal, cortes, roteiro de negociação, reserva, planner de 30 dias e metas.</p>
+</div>
+</section>
+<section class="dark">
+<div class="wrap">
+<div class="head light">
+<div class="eyebrow">Plano de 30 dias</div>
+<h2>Do diagnóstico à estabilidade, um passo por dia</h2>
+<p>De 15 a 40 minutos por dia. Se perder um dia, você continua do seguinte, sem recomeçar.</p>
+</div>
+<div class="weeks four">
+<div class="week"><div class="w">SEMANA 1</div><h3>Diagnóstico</h3><p>Raio-x financeiro, mapa das dívidas e auditoria dos gastos.</p></div>
+<div class="week"><div class="w">SEMANA 2</div><h3>Organização</h3><p>Orçamento, controle semanal, cortes e ideias de renda extra.</p></div>
+<div class="week"><div class="w">SEMANA 3</div><h3>Dívidas</h3><p>Método de pagamento, roteiro de negociação e primeiros acordos.</p></div>
+<div class="week"><div class="w">SEMANA 4</div><h3>Estabilidade</h3><p>Reserva, regra das 48 horas e metas de curto, médio e longo prazo.</p></div>
+</div>
+</div>
+</section>
+<section class="sand who">
+<div class="wrap two">
+<div>
+<h3>Este guia é para você se…</h3>
+<ul class="yes">
+<li>Quer sair das dívidas e entender o próprio dinheiro</li>
+<li>Prefere um passo a passo claro a conselhos genéricos</li>
+<li>Tem renda fixa ou variável e quer um orçamento que funcione</li>
+<li>Quer aprender a negociar com segurança e evitar golpes</li>
+</ul>
+</div>
+<div>
+<h3>Este guia não é para você se…</h3>
+<ul class="no">
+<li>Procura fórmulas de enriquecer rápido ou promessas de retorno garantido</li>
+<li>Precisa de consultoria jurídica, contábil ou de investimentos individual: o livro é educativo e não substitui um profissional</li>
+<li>Espera resultado sem praticar</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="dark offer" id="comprar">
+<div class="wrap">
+<div class="box">
+<div class="eyebrow">Comece hoje</div>
+<h2>Do Vermelho ao Azul, o ebook completo</h2>
+<ul>
+<li>Ebook em PDF com 76 páginas e 15 capítulos</li>
+<li>Plano de 30 dias, dia a dia</li>
+<li>9 fichas para imprimir e preencher</li>
+<li>Kit de emergência financeira de uma página</li>
+<li>Acesso imediato após a confirmação do pagamento</li>
+</ul>
+<div class="price">R$ 27</div>
+<a class="btn cta-link" href="#comprar">Quero começar agora</a>
+<p class="guar">Compra com garantia de 7 dias: se não gostar, você pede o reembolso.</p>
+</div>
+</div>
+</section>
+<section>
+<div class="wrap faq">
+<div class="head"><div class="eyebrow">Dúvidas frequentes</div><h2>Antes de comprar</h2></div>
+<details><summary>O livro vai limpar o meu nome?</summary><p>Não. Ninguém pode prometer isso. O livro ensina a mapear as dívidas, negociar com os credores pelos canais oficiais e conferir os acordos, que é o caminho para regularizar sua situação.</p></details>
+<details><summary>Serve se minha renda varia de mês para mês?</summary><p>Sim. O livro orienta usar a média, ou a menor renda dos últimos três meses, como base do orçamento e da reserva de emergência.</p></details>
+<details><summary>O livro recomenda investimentos?</summary><p>Não. Ele explica conceitos básicos e alerta para promessas enganosas, mas não faz recomendação de produtos. Antes de investir, estude e, se precisar, consulte um profissional certificado.</p></details>
+<details><summary>Preciso de planilha ou aplicativo?</summary><p>Não. As fichas são feitas para imprimir e preencher à mão. Se preferir, você pode copiar os modelos para uma planilha ou usar o aplicativo que já tem.</p></details>
+<details><summary>Quanto tempo por dia preciso dedicar?</summary><p>De 15 a 40 minutos por dia no plano de 30 dias. A revisão semanal leva 15 minutos.</p></details>
+<details><summary>Como recebo o ebook?</summary><p>Depois da confirmação do pagamento, você recebe o acesso por e-mail e já pode baixar o PDF. Funciona em celular, tablet e computador.</p></details>
+</div>
+</section>
+<footer>
+<div class="wrap">
+<div class="brand">BIBLIOTECA DIGITAL</div>
+<p>Material educativo. Não substitui consultoria financeira, jurídica ou contábil e não faz recomendação de investimentos. Resultados variam de pessoa para pessoa. Os valores dos exemplos são ilustrativos.</p>
+</div>
+</footer>
+<script>
+var CHECKOUT_URL = "https://pay.kiwify.com.br/6LLVey4";
+if (CHECKOUT_URL) {
+document.querySelectorAll(".cta-link").forEach(function (a) { a.href = CHECKOUT_URL; });
+}
+</script>
+</body>
+</html>
