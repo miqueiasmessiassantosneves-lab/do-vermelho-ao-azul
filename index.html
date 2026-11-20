@@ -4,8 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Do Vermelho ao Azul: o guia prático para sair das dívidas</title>
+<meta name="description" content="Ebook em PDF com 76 páginas, 15 capítulos e plano de 30 dias para organizar o dinheiro, negociar dívidas e montar uma reserva. R$ 27 com garantia de 7 dias.">
+<meta name="theme-color" content="#0F2B46">
+<meta property="og:title" content="Do Vermelho ao Azul: o guia prático para sair das dívidas">
+<meta property="og:description" content="Plano de 30 dias, 9 fichas e 15 capítulos para organizar o dinheiro e negociar dívidas. Garantia de 7 dias.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Inter:wght@400;500;600&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Inter:wght@400;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Inter:wght@400;600&display=swap"></noscript>
 <style>
 :root{
 --teal:#0F2B46; --teal-2:#173A5C; --cream:#F7F1E3; --sand:#EFE6D2; --amber:#F4C26B; --amber-d:#8A5A00; --amber-btn:#F4C26B;
@@ -87,12 +94,25 @@ section{padding:56px 0}
 .hero .grid,.two,.cards,.weeks{grid-template-columns:1fr}
 .hero .grid{gap:40px}
 .book{order:-1}
-.book svg{max-width:220px}
-.hero{padding:48px 0 64px}
+.book svg{max-width:130px}
+.hero{padding:28px 0 56px}
 .btn{width:100%;text-align:center}
 }
 .weeks.four{grid-template-columns:repeat(4,1fr)}
 @media (max-width:860px){.weeks.four{grid-template-columns:1fr}}
+.hero .proof{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:4px;font-size:14px;color:var(--mist)}
+.hero .proof span::before{content:"✓ ";color:var(--amber)}
+.seal{margin:22px auto 0;max-width:420px;border:1.5px solid #1F6B4A;border-radius:14px;padding:14px 18px;background:#EAF4EE;color:var(--ink);text-align:left}
+.seal strong{display:block;color:#1F6B4A;font-size:16px}
+.seal span{font-size:15px;color:var(--muted)}
+.secure{margin-top:12px;font-size:13px;color:var(--muted)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--teal);border-top:1px solid rgba(247,241,227,.22);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:none;align-items:center;justify-content:space-between;gap:12px;transform:translateY(110%);transition:transform .25s ease}
+.sticky.show{transform:none}
+.sticky strong{display:block;font-family:'Fraunces',Georgia,serif;font-size:24px;color:var(--cream);line-height:1.1}
+.sticky span{font-size:13px;color:var(--mist)}
+.sticky .btn{width:auto;flex:0 0 auto;min-height:48px;padding:12px 22px;font-size:16px}
+@media (max-width:860px){.sticky{display:flex}footer{padding-bottom:96px}}
+@media (prefers-reduced-motion:reduce){.sticky{transition:none}html{scroll-behavior:auto}}
 </style>
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -114,8 +134,9 @@ a.addEventListener('click',function(){fbq('track','InitiateCheckout');});
 <h1>Saia do vermelho e organize seu dinheiro, passo a passo</h1>
 <p class="lead">Um método simples para olhar os números sem medo, montar um orçamento que cabe na vida real, negociar suas dívidas e construir uma reserva para não voltar ao vermelho.</p>
 <div class="cta">
-<a class="btn cta-link" href="#comprar">Quero meu exemplar</a>
-<span class="note">Ebook digital em PDF · 76 páginas · acesso imediato após a compra</span>
+<a class="btn cta-link" href="#comprar">Quero meu exemplar · R$ 27</a>
+<div class="proof"><span>Garantia de 7 dias</span><span>Acesso imediato</span><span>Pagamento único</span></div>
+<span class="note">Ebook digital em PDF · 76 páginas · funciona no celular, tablet e computador</span>
 </div>
 </div>
 <div class="book"><svg viewBox="0 0 300 450" role="img" aria-label="Capa do ebook Do Vermelho ao Azul, da Biblioteca Digital">
@@ -221,7 +242,8 @@ a.addEventListener('click',function(){fbq('track','InitiateCheckout');});
 </ul>
 <div class="price">R$ 27</div>
 <a class="btn cta-link" href="#comprar">Quero começar agora</a>
-<p class="guar">Compra com garantia de 7 dias: se não gostar, você pede o reembolso.</p>
+<div class="seal"><strong>Garantia de 7 dias</strong><span>Se não gostar, você pede o reembolso.</span></div>
+<p class="secure">Pagamento único, processado pelo Kiwify. Acesso por e-mail logo após a confirmação.</p>
 </div>
 </div>
 </section>
@@ -242,11 +264,27 @@ a.addEventListener('click',function(){fbq('track','InitiateCheckout');});
 <p>Material educativo. Não substitui consultoria financeira, jurídica ou contábil e não faz recomendação de investimentos. Resultados variam de pessoa para pessoa. Os valores dos exemplos são ilustrativos.</p>
 </div>
 </footer>
+<div class="sticky" id="sticky"><div><strong>R$ 27</strong><span>Garantia de 7 dias</span></div><a class="btn cta-link" href="#comprar" tabindex="-1">Quero começar</a></div>
 <script>
 var CHECKOUT_URL = "https://pay.kiwify.com.br/6LLVey4";
 if (CHECKOUT_URL) {
 document.querySelectorAll(".cta-link").forEach(function (a) { a.href = CHECKOUT_URL; });
 }
+(function () {
+var bar = document.getElementById("sticky");
+var offer = document.getElementById("comprar");
+if (!bar || !offer || !("IntersectionObserver" in window)) return;
+var link = bar.querySelector("a");
+var seen = {offer: false};
+function update() {
+var show = !seen.offer;
+bar.classList.toggle("show", show);
+bar.setAttribute("aria-hidden", show ? "false" : "true");
+link.tabIndex = show ? 0 : -1;
+}
+update();
+new IntersectionObserver(function (e) { seen.offer = e[0].isIntersecting; update(); }).observe(offer);
+})();
 </script>
 </body>
 </html>
