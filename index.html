@@ -120,7 +120,7 @@ fbq('init','1470149008665781');
 fbq('track','PageView');
 document.addEventListener('DOMContentLoaded',function(){
 document.querySelectorAll('.cta-link').forEach(function(a){
-a.addEventListener('click',function(){fbq('track','InitiateCheckout');});
+a.addEventListener('click',function(){fbq("trackCustom","CliqueCTA");});
 });
 });
 </script>
@@ -266,7 +266,14 @@ a.addEventListener('click',function(){fbq('track','InitiateCheckout');});
 </footer>
 <div class="sticky" id="sticky"><div><strong>R$ 27</strong><span>Garantia de 7 dias</span></div><a class="btn cta-link" href="#comprar" tabindex="-1">Quero começar</a></div>
 <script>
-var CHECKOUT_URL = "https://pay.kiwify.com.br/6LLVey4";
+var CHECKOUTS = {
+  kiwify: "https://pay.kiwify.com.br/6LLVey4",
+  hotmart: "https://pay.hotmart.com/E108611210H?off=qjwevi4x"
+};
+var DEFAULT_CHECKOUT = "kiwify";
+var wanted = "";
+try { wanted = (new URLSearchParams(location.search).get("c") || "").toLowerCase(); } catch (e) {}
+var CHECKOUT_URL = CHECKOUTS[wanted] || CHECKOUTS[DEFAULT_CHECKOUT];
 if (CHECKOUT_URL) {
 document.querySelectorAll(".cta-link").forEach(function (a) { a.href = CHECKOUT_URL; });
 }
